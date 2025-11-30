@@ -1,0 +1,26 @@
+{
+  "name": "web-app-devtest-stack",
+  "version": "0.1.0",
+  "description": "Sample web app with Dev+Test environment, CI/CD, monitoring and versioning.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "jest --runInBand",
+    "migrate": "node src/db.js migrate"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.0",
+    "sequelize": "^6.32.1",
+    "prom-client": "^14.0.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "supertest": "^6.4.2",
+    "nodemon": "^3.0.1"
+  }
+}
