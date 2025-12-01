@@ -1,89 +1,94 @@
 
-# Ahmad Dev Project / مشروع أحمد للتطوير
+# Ahmad Dev Project
 
-## 🚀 نبذة / Overview  
+## 📌 Overview / نظرة عامة
+
 **EN:**  
-This repository contains a full web-app project including backend API, database setup, CI/CD, and monitoring tools — ready for development, testing, and deployment.  
+This repository contains a complete web backend project including API server, database integration, Docker environment, CI/CD pipeline, and a clean development setup.  
+The project is prepared for development, testing, and deployment.
 
 **AR:**  
-يحتوي هذا المستودع على مشروع ويب متكامل يشمل خادم API، قاعدة بيانات، إعداد CI/CD، وأدوات مراقبة — جاهز للتطوير والاختبار والنشر.
+يحتوي هذا المستودع على مشروع ويب متكامل يتضمن خادم API، وربط قاعدة البيانات، وبيئة Docker، ونظام CI/CD، مع إعدادات جاهزة للتطوير والاختبار والنشر.
 
 ---
 
-## 🧰 التقنيات المستخدمة / Tech Stack  
-- **Backend:** Node.js + Express  
-- **Database:** PostgreSQL (Dockerized)  
-- **Containerization:** Docker & Docker Compose  
-- **CI/CD:** GitHub Actions (build → test → build/push image → deploy)  
-- **Monitoring:** Prometheus + Grafana  
-- **Testing:** Jest + Supertest  
+## 🚀 Tech Stack / التقنيات المستخدمة
+
+- **Node.js + Express** – Backend API  
+- **PostgreSQL** – Database  
+- **Docker & Docker Compose** – Containerization  
+- **GitHub Actions** – CI/CD  
+- **Jest / Supertest** – Testing  
+- **Prometheus + Grafana** – Monitoring (اختياري)
 
 ---
 
-## 📦 كيفية التشغيل محليًا / Local Setup  
+## 📁 Project Structure / هيكل المشروع
 
+├── index.js           # Main server file ├── db.js              # Database connection ├── Dockerfile         # Backend container ├── docker-compose.yml # Combined services ├── .env.example       # Environment variables template ├── ci.yml             # CI/CD pipeline └── README.md
+
+---
+
+## 🧰 How to Run Locally / كيفية التشغيل محليًا
+
+### **1. Clone the repo**
 ```bash
-# نسخ المستودع
-git clone https://github.com/USERNAME/ahmad_dev_projects.git
+git clone https://github.com/USERNAME/ahmad_dev_projects
 cd ahmad_dev_projects
 
-# تشغيل التطبيق (يتطلب Docker + Docker Compose)
+2. Run using Docker
+
 docker-compose up --build
 
-التطبيق سيكون متاحًا على: http://localhost:3000
+3. Access
 
-لوحة المراقبة (Grafana) على: http://localhost:3001
+API: http://localhost:3000
 
-نقطة الصحة (health): GET /health
+Health check: /health
 
-API المستخدمين: GET /api/users, POST /api/users
-
-
-
----
-
-✅ CI/CD & Deployment
-
-عند كل تحديث على main/master → GitHub Actions تقوم تلقائيًا بـ build + test + بناء صورة Docker + نشر إلى خادم Test (إذا تم إعداد الأسرار Secrets).
-
-استخدم الإصدارات (Git Tags) لإدارة الإصدارات والرجوع إلى نسخة سابقة بسهولة.
+Users API: /api/users
 
 
 
 ---
 
-🔧 إن أردت المساهمة / Contribution Guideline
+🔄 CI/CD
 
-1. افتح Issue لوصف التعديل.
+GitHub Actions automatically handles:
 
+Building the application
 
-2. أنشئ Branch جديد (feature/your-feature).
+Running tests
 
+Building Docker image
 
-3. نفّذ التعديلات + اختبارات (إن لزم).
-
-
-4. أرسل Pull Request وسأراجع وأدمج إن كان كل شيء صحيحًا.
-
+Deployment to test environment (after adding secrets)
 
 
 
 ---
 
-📄 الترخيص / License
+🏷️ Versioning / إدارة الإصدارات
 
-هذا المشروع مرخّص تحت ترخيص MIT — يمكنك استخدامه بحرية مع ذكر الأصل.
+Use:
+
+git tag v1.0.0
+git push origin v1.0.0
+
+This creates an official release.
 
 
 ---
 
-📝 ملاحظات / Notes
+📊 Monitoring
 
-تأكد من إعداد متغيرات البيئة (إذا أضفت .env) قبل التشغيل.
+If needed, Prometheus + Grafana can be integrated through docker-compose.
 
-يُفضّل تشغيل Docker Compose عبر بيئة تدعم docker و docker-compose.
 
-لو أردت نشر التطبيق في بيئة إنتاج (Production) — يُنصح بضبط إعدادات الأمان، SSL، والحاويات المناسبة.
+---
 
+📄 License
+
+MIT License – Free to use and modify.
 
 ---
