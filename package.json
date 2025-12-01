@@ -1,4 +1,4 @@
-{
+⁹{
   "name": "web-app-devtest-stack",
   "version": "0.1.0",
   "description": "Sample web app with Dev+Test environment, CI/CD, monitoring and versioning.",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "jest": "^29.6.1",
-    "supertest": "^6.4.2",
+    "supertest": "^6.3.3",
     "nodemon": "^3.0.1"
   }
 }
